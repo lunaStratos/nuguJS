@@ -64,7 +64,7 @@ module.exports = (request,response  = {}) => {
      * ssml사용시
      */
     ssml: (url) => {
-      const offsetInMilliseconds = requestBody.context.supportedInterfaces.AudioPlayer.offsetInMilliseconds
+      const offsetInMilliseconds = req.body.context.supportedInterfaces.AudioPlayer.offsetInMilliseconds
       let paramaterValue = req.body.parameters.type.value
       const jsonResult = makeJsonStream(paramaterValue, url, offsetInMilliseconds)
       return res.send(jsonResult)
@@ -74,7 +74,7 @@ module.exports = (request,response  = {}) => {
      */
     token: () => {
       let getToken = ""
-      if (context.session.hasOwnProperty('accessToken')) {
+      if (req.body.context.session.hasOwnProperty('accessToken')) {
           getToken =  req.body.context.session.accessToken
       }else{
           getToken =  undefined
