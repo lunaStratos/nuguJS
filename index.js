@@ -15,12 +15,20 @@ module.exports = (request,response  = {}) => {
   const req = request
   const res = response
   let output = {}
+
   return {
     /**
-     * 하나의 파라메터 값 얻
-     *  valueName : String
-     *  return : 키에 대한 값 value
+     * actionName얻기
      */
+     name: () => {
+        const actionName = req.body.action.actionName
+       return actionName
+     },
+     /**
+      * 하나의 파라메터 값 얻
+      *  valueName : String
+      *  return : 키에 대한 값 value
+      */
      get: (valueName) => {
        const parameters = req.body.action.parameters
        let value = "";
