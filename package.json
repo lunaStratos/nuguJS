@@ -1,0 +1,22 @@
+{
+  "name": "nugujs",
+  "version": "0.1.1",
+  "description": "SK NUGU req & res module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunaStratos/nuguJS.git"
+  },
+  "keywords": [
+    "nugu"
+  ],
+  "author": "LunaStratos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lunaStratos/nuguJS/issues"
+  },
+  "homepage": "https://github.com/lunaStratos/nuguJS#readme"
+}
