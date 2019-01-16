@@ -1,24 +1,27 @@
 'use strict';
-
 /**
  * 누구용으로 만들어진 NUGU JS
  * request :
  * response:
  * data: {name: value} 형태로 만들어진 json
  */
-
 const makeJson = require('./json/json_nugu.js')
 const makeJsonStream = require('./json/json_nuguStream.js')
 
+
+/**아래 내용으로 채우기
+ */
 module.exports = (request,response  = {}) => {
 
   const req = request
   const res = response
+
   let output = {}
+
 
   return {
     /**
-     * actionName얻기
+     * actionName얻는 부분
      */
      name: () => {
         const actionName = req.body.action.actionName
