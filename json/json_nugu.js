@@ -1,7 +1,7 @@
 'use strict';
 
 
-module.exports = (valueJson  = {}) =>{
+module.exports = (valueJson) => {
   let jsonReturn = {
     "version": "2.0",
     "resultCode": "OK",
