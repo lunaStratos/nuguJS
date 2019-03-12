@@ -1,6 +1,6 @@
 {
   "name": "nugujs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "SK NUGU req & res module",
   "main": "index.js",
   "scripts": {
