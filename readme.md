@@ -63,6 +63,28 @@ const accessToken = nugu.token()
 
 ***
 
+### GCP cloud function에서 사용방법 ###
+
+    const nuguApp = require('nugujs');
+    const nugu = nuguApp(req, res);
+    let output = {}
+    
+    exports.nugu_lotto = (req, res) => {
+    
+    const nugu = nuguApp(req, res); //필수
+   
+    function say_function(){
+    
+    const parameter = nugu.get('parameter') // 엔티티 파라메터 받기
+    let value = "Day before yesterday I saw a rabbit, and yesterday a deer, and today, you";
+    output.valuename = value
+    
+    nugu.say(output); // 누구로 음성 아웃풋
+    
+    }    
+    
+    }
+
 
 ### Express 엔진에서 사용방법 ###
 
