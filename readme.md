@@ -62,6 +62,10 @@ const accessToken = nugu.token()
     nugu.say(output);
 
 ***
+### 예외처리 error code 보낼 때 ###
+    const errorCode = 400
+    nugu.exception(errorCode)
+
 
 ### GCP cloud function에서 사용방법 ###
 
