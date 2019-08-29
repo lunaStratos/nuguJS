@@ -247,7 +247,7 @@ module.exports = (request, response) => {
        */
       privateUserInfo: () => {
         let value = {};
-        if (req.body.hasOwnProperty('profile') {
+        if (req.body.hasOwnProperty('profile') ){
             value = req.body.profile.privatePlay.enrolledUser
           } else {}
           return value
@@ -257,15 +257,24 @@ module.exports = (request, response) => {
          * Private mode시 특별한 Device Id
          * return String
          */
-        privateDeviceId: () => {
-          let value = {};
-          if (req.body.hasOwnProperty('profile') {
-              value = req.body.profile.privatePlay.deviceUniqueId
-            } else {
-              value = undefined
-            }
-
-            return value
+      privateDeviceId: () => {
+        let value = {};
+        if ( req.body.hasOwnProperty('profile') ){
+            value = req.body.profile.privatePlay.deviceUniqueId
+          } else {
+            value = undefined
           }
-        }
+
+          return value
+        },
+      /*
+        예외 처리 code 전송        
+      */
+      exception: (valueData) => {
+        let parameterJson = {}
+        parameterJson["resultCode"] = valueData
+        
+        return res.send(parameterJson)
       }
+    }
+}
